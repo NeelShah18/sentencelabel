@@ -89,46 +89,5 @@ def get_solid_setiment(__prob_sentiment):
 	
 	return __solid_setiment
 
-	
-def get_sentiment(text="Sample text data! And I am positive :-)", on_base = "t", flag_prob=False):
-	'''base_emoji return setiment of the tect based on emoji and emoticons in text.
-
-Args:
-	text (str): Setence of paragraph for calculating setiment.
-	flag (boolean): True --> It gives 5 criteria 0,1,2,3,4 where 2(Nutral), 4(very positive), 1(very negative)
-					False --> Gives probability with 2 floating point accuray between -1(negative) to 1(positive)
-
-Returns:
-	__prob_sentiment: If flag = True it will return number(int) between 0 to 4
-					  If flag = False it will return nmber(float-2f) between -1 to 1
-
-Defaults:
-	text = "Sample text data! And I am positive :-)"
-	on_base = "t"
-	flag_prob = False
-
-'''
-	result = {}
-	text = text
-	on_base = on_base
-	flag_prob = flag_prob
-	if on_base == "e":
-		result = base_emoji(text,flag_prob)
-	elif on_base == "t":
-		result = base_text(text, flag_prob)
-	else:
-		result = {error: "Choose right on_base, it must be e or t, wehere e = emoji and t = text."}
-
-	return result
-
-def test():
-	'''
-	It is test function of current file: label.py
-	'''
-	test_data = "I love python 👨 :-)"
-	result = get_sentiment(text=test_data, on_base='e', flag_prob=False)
-	print(result)
-	return None
-
 if __name__ == '__main__':
 	test()
