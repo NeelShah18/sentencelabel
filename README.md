@@ -14,7 +14,7 @@ where 0 in extrem negative, 1 is negative, 2 in nutral, 3 in positive, 4 in extr
 **Note: If you choose emoji and emoticond base and you don't have emoji or emoticons in text it will do sentiment analysis on text.**
 
 
-```python
+```
 get_sentiment return setiment of the text, emoji and emoticons in text.
 
 Args:
@@ -49,7 +49,7 @@ code example:
 
 **ngram** function convert any text to n-gram formate as we want. here gram in gram jumber we want.
 
-```python
+```
 ngram function convert test to n-gram
 
 	Args:
@@ -79,7 +79,7 @@ code example:
 
 **tokenizer** convert given text into tokens
 
-```python
+```
 tokenizer return tokens of the text.
 
 	Args:
@@ -90,7 +90,7 @@ tokenizer return tokens of the text.
 ```
 
 code example:
-```
+```python
 >>> text = "I love python :-) why not"
 >>> sentencelabel.tokenizer(text=text)
 ['I', 'love', 'python', ':', '-', ')', 'why', 'not']
@@ -99,7 +99,7 @@ code example:
 
 **do_clean** funciton provide cleaning of the text. Their are multiple option are avilable you can chose from uppercase, lowercase, spelling correction, stop words remobe, punchuation remove, special cahrter remove. In future we are adding more function to this library. 
 
-```python
+```
 do_clean function different type of text cleaning.
 
 	Args:
