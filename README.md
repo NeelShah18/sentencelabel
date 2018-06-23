@@ -4,13 +4,10 @@ sentencelabel
 #### Open source to label the test data based on setiment. We also adding functioanlity such as text is realted to which area(for example food, politics, education etc).
 
 This library is all in one solution for data cleaning, labeling and converting in n-gram or tokens for future processing.
--------------------------------------------------------------------------------------------------------------------------
 
+Below is basic function of sentencelabel library. (It is still in development and new feature will be add.) Please create new issue for new functioanlity you want. 
 
-Below is basic function of sentencelabel library. (It is still in development and new feature will be add.) Please create new issue for new functioanlity you want.
-
-
-get_sentiment gives the setiment of the text. It gives option to analysis the text based on emoji and emoticons together or only text. You can also choose type of output you need for setiment
+**get_sentiment** gives the setiment of the text. It gives option to analysis the text based on emoji and emoticons together or only text. You can also choose type of output you need for setiment
 of the test. It will be float between -1 to 1 where -1 to extrem negative to 1 extrem postive, 0 consider as nutral. You also chose the integer(criteria based sentiment) between 0 to 4.
 where 0 in extrem negative, 1 is negative, 2 in nutral, 3 in positive, 4 in extrem positive.
 
@@ -18,7 +15,7 @@ where 0 in extrem negative, 1 is negative, 2 in nutral, 3 in positive, 4 in extr
 
 
 ```python
-	get_sentiment return setiment of the text, emoji and emoticons in text.
+get_sentiment return setiment of the text, emoji and emoticons in text.
 
 Args:
 	text (str): Setence of paragraph for calculating setiment.
@@ -50,7 +47,7 @@ code example:
 
 ```
 
-ngram function convert any text to n-gram formate as we want. here gram in gram jumber we want.
+**ngram** function convert any text to n-gram formate as we want. here gram in gram jumber we want.
 
 ```python
 ngram function convert test to n-gram
@@ -80,7 +77,7 @@ code example:
 
 ```
 
-tokenizer convert given text into tokens
+**tokenizer** convert given text into tokens
 
 ```python
 tokenizer return tokens of the text.
@@ -99,6 +96,8 @@ code example:
 ['I', 'love', 'python', ':', '-', ')', 'why', 'not']
 
 ```
+
+**do_clean** funciton provide cleaning of the text. Their are multiple option are avilable you can chose from uppercase, lowercase, spelling correction, stop words remobe, punchuation remove, special cahrter remove. In future we are adding more function to this library. 
 
 ```python
 do_clean function different type of text cleaning.
