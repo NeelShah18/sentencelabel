@@ -4,10 +4,11 @@ from nltk import word_tokenize
 from textblob import TextBlob
 
 def get_sentiment(text="Sample text data! And I am positive :-)", on_base = "t", flag_prob=False):
-	'''base_emoji return setiment of the tect based on emoji and emoticons in text.
+	'''get_sentiment return setiment of the text, emoji and emoticons in text.
 
 Args:
 	text (str): Setence of paragraph for calculating setiment.
+	on_base(charater): 't' for text sentitement and 'e' for emoji ant emoticons sentiment
 	flag (boolean): True --> It gives 5 criteria 0,1,2,3,4 where 2(Nutral), 4(very positive), 1(very negative)
 					False --> Gives probability with 2 floating point accuray between -1(negative) to 1(positive)
 
@@ -87,7 +88,8 @@ def do_clean(text, settings):
 def test():
 	'''test fucntion for setencelabel library.
 	'''
-	test_data = "I love python 👨 :-)"
+	#test_data = "I love python 👨 :-)"
+	test_data = "I love python :-) why not"
 	result = get_sentiment(text=test_data, on_base='e', flag_prob=False)
 	print(result)
 	x = ngram("ever use may thought sat high school english class grown find writing far ever would expected",3)

@@ -6,7 +6,7 @@ import string
 
 #default setting for data cleaning
 default_settings = {
-	'to_upeer' : False,
+	'to_upper' : False,
 	'to_lower' : False,
 	'remove_special' : False,
 	'remove_number' : False,
@@ -25,7 +25,7 @@ def clean_it(text, settings = default_settings):
 
 	defaults: Here True flag means to do that things on given text.
 		dettings : {
-			'to_upeer' : False,
+			'to_upper' : False,
 			'to_lower' : False,
 			'remove_special' : False,
 			'remove_number' : False,
@@ -36,7 +36,7 @@ def clean_it(text, settings = default_settings):
 	'''
 	__text = str(text)
 	try:
-		if settings['to_upeer'] == True:
+		if settings['to_upper'] == True:
 			__text = __text.upper()
 		
 		if settings['to_lower'] == True:
@@ -61,7 +61,7 @@ def clean_it(text, settings = default_settings):
 
 		if settings['spelling_correction'] == True:
 			__clean = TextBlob(__text)
-			__text = __clean.correct()
+			__text = str(__clean.correct())
 
 	except Exception as e:
 		print("Error wrong settings"+str(e))
@@ -72,7 +72,7 @@ def clean_it(text, settings = default_settings):
 
 def test():
 	test_settings = {
-	'to_upeer' : False,
+	'to_upper' : False,
 	'to_lower' : True,
 	'remove_special' : True,
 	'remove_number' : False,

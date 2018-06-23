@@ -24,11 +24,13 @@ def base_emoji(text, flag):
 	if __temp_emoji['flag'] == True:
 		for data in __temp_emoji['mean']:
 			__pre_final_text = str(__pre_final_text) + str(data)+" "
-			
-	if __temp_emoti['flag'] == True:
-		for data in __temp_emoti['mean']:
-			__pre_final_text = str(__pre_final_text) + str(data)+" "
-			
+	try:
+		if __temp_emoti['flag'] == True:
+			for data in __temp_emoti['mean']:
+				__pre_final_text = str(__pre_final_text) + str(data)+" "
+	except:
+		pass
+
 	if len(__pre_final_text) < 2:
 		__pre_final_text = text
 
